@@ -1,0 +1,9 @@
+# Maven
+backend/target/
+
+# Frontend dependencies
+frontend/node_modules/
+
+# Backend build files
+backend/*.jar
+backend/*.war

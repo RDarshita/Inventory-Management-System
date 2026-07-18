@@ -7,6 +7,7 @@ import TopBar from './components/TopBar';
 import Dashboard from './pages/Dashboard';
 import Products from './pages/Products';
 import AddProduct from './pages/AddProduct';
+import EditProduct from './pages/EditProduct';
 import Categories from './pages/Categories';
 import Suppliers from './pages/Suppliers';
 import Customers from './pages/Customers';
@@ -16,6 +17,7 @@ import Inventory from './pages/Inventory';
 import Reports from './pages/Reports';
 import Users from './pages/Users';
 import Settings from './pages/Settings';
+import ProductDetails from './pages/ProductDetails';
 
 // Placeholder function to simulate new pages until we build them
 const Placeholder = ({ title }) => (
@@ -50,6 +52,7 @@ function App() {
               <Route path="/" element={<Dashboard refreshTrigger={refreshTrigger} />} />
               <Route path="/products" element={<Products />} />
               <Route path="/products/add" element={<AddProduct />} />
+              <Route path="/products/edit/:id" element={<EditProduct />} />
               <Route path="/categories" element={<Categories />} />
               <Route path="/suppliers" element={<Suppliers />} />
               <Route path="/customers" element={<Customers />} />
@@ -59,6 +62,7 @@ function App() {
               <Route path="/reports" element={<Reports />} />
               <Route path="/users" element={<Users />} />
               <Route path="/settings" element={<Settings />} />
+              <Route path="/products/:id" element={<ProductDetails />} />
             </Routes>
           </main>
           

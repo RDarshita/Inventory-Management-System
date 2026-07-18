@@ -1,9 +1,0 @@
-com\packerstech\config\CorsConfig.class
-com\packerstech\controller\DashboardController.class
-com\packerstech\dto\DashboardSummaryDTO$ChartData.class
-com\packerstech\PackersTechApplication.class
-com\packerstech\dto\DashboardSummaryDTO$Activity.class
-com\packerstech\dto\DashboardSummaryDTO$DashboardSummaryDTOBuilder.class
-com\packerstech\dto\DashboardSummaryDTO$Activity$ActivityBuilder.class
-com\packerstech\dto\DashboardSummaryDTO$ChartData$ChartDataBuilder.class
-com\packerstech\dto\DashboardSummaryDTO.class
