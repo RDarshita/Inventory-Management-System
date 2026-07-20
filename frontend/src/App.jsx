@@ -11,13 +11,16 @@ import EditProduct from './pages/EditProduct';
 import Categories from './pages/Categories';
 import Suppliers from './pages/Suppliers';
 import Customers from './pages/Customers';
-import Purchases from './pages/Purchases';
+import PurchasesPage from './pages/PurchasesPage';
 import Sales from './pages/Sales';
 import Inventory from './pages/Inventory';
 import Reports from './pages/Reports';
 import Users from './pages/Users';
 import Settings from './pages/Settings';
 import ProductDetails from './pages/ProductDetails';
+import CompanyParty from './pages/CompanyParty';
+import PartyDetail from './pages/PartyDetail';
+import PartyItems from './pages/PartyItems';
 
 // Placeholder function to simulate new pages until we build them
 const Placeholder = ({ title }) => (
@@ -44,7 +47,7 @@ function App() {
       <div className="flex min-h-screen bg-background text-text selection:bg-primary/30">
         <Sidebar />
         
-        <div className="flex-1 md:ml-64 flex flex-col relative min-h-screen">
+        <div className="flex-1 md:ml-[248px] flex flex-col relative min-h-screen">
           <TopBar onRefresh={handleRefresh} />
           
           <main className="flex-1 overflow-x-hidden">
@@ -56,13 +59,19 @@ function App() {
               <Route path="/categories" element={<Categories />} />
               <Route path="/suppliers" element={<Suppliers />} />
               <Route path="/customers" element={<Customers />} />
-              <Route path="/purchases" element={<Purchases />} />
+              <Route path="/purchases" element={<PurchasesPage />} />
               <Route path="/sales" element={<Sales />} />
               <Route path="/inventory" element={<Inventory />} />
               <Route path="/reports" element={<Reports />} />
               <Route path="/users" element={<Users />} />
               <Route path="/settings" element={<Settings />} />
               <Route path="/products/:id" element={<ProductDetails />} />
+              <Route path="/company-party" element={<CompanyParty />} />
+              <Route path="/company-party/:id" element={<PartyDetail />} />
+              <Route path="/company-party/:id/items" element={<PartyItems />} />
+              <Route path="/incoming" element={<Placeholder title="Incoming" />} />
+              <Route path="/outgoing" element={<Placeholder title="Outgoing" />} />
+              <Route path="/ledger" element={<Placeholder title="Ledger" />} />
             </Routes>
           </main>
           
