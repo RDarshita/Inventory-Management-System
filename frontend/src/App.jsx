@@ -10,9 +10,10 @@ import AddProduct from './pages/AddProduct';
 import EditProduct from './pages/EditProduct';
 import Categories from './pages/Categories';
 import Suppliers from './pages/Suppliers';
-import Customers from './pages/Customers';
 import PurchasesPage from './pages/PurchasesPage';
+import IncomingPage from './pages/IncomingPage';
 import Sales from './pages/Sales';
+import Customers from "./pages/Customers";
 import Inventory from './pages/Inventory';
 import Reports from './pages/Reports';
 import Users from './pages/Users';
@@ -60,6 +61,7 @@ function App() {
               <Route path="/suppliers" element={<Suppliers />} />
               <Route path="/customers" element={<Customers />} />
               <Route path="/purchases" element={<PurchasesPage />} />
+              <Route path="/incoming" element={<IncomingPage />} />
               <Route path="/sales" element={<Sales />} />
               <Route path="/inventory" element={<Inventory />} />
               <Route path="/reports" element={<Reports />} />
@@ -69,7 +71,7 @@ function App() {
               <Route path="/company-party" element={<CompanyParty />} />
               <Route path="/company-party/:id" element={<PartyDetail />} />
               <Route path="/company-party/:id/items" element={<PartyItems />} />
-              <Route path="/incoming" element={<Placeholder title="Incoming" />} />
+              {/* <Route path="/incoming" element={<Placeholder title="Incoming" />} /> */}
               <Route path="/outgoing" element={<Placeholder title="Outgoing" />} />
               <Route path="/ledger" element={<Placeholder title="Ledger" />} />
             </Routes>

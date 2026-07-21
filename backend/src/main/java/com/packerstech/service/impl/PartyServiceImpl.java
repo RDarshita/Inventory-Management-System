@@ -22,6 +22,7 @@ import java.util.stream.Collectors;
 public class PartyServiceImpl implements PartyService {
 
     private final PartyRepository partyRepository;
+    private final com.packerstech.repository.IncomingPaymentRepository incomingPaymentRepository;
 
     @Override
     public PartyResponse createParty(PartyRequest request) {
@@ -84,8 +85,8 @@ public class PartyServiceImpl implements PartyService {
         // TODO: Calculate totalSales from Sales table once Sales module is implemented
         double totalSales = 0.0;
 
-        // TODO: Calculate totalReceived from Incoming/Payments table once implemented
-        double totalReceived = 0.0;
+        Double sum = incomingPaymentRepository.sumAmountByPartyId(id);
+        double totalReceived = sum != null ? sum : 0.0;
 
         // TODO: pendingAmount = totalSales - totalReceived (once real data exists)
         double pendingAmount = totalSales - totalReceived;

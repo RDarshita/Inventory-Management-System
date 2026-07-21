@@ -31,6 +31,11 @@ const partyService = {
         return response.data;
     },
 
+    getOutstandingInvoices: async (id) => {
+        const response = await api.get(`/parties/${id}/outstanding-invoices`);
+        return response.data;
+    },
+
     getPartyLedger: async (id) => {
         const response = await api.get(`/parties/${id}/ledger`);
         return response.data;

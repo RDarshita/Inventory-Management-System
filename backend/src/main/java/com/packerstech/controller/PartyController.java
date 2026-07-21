@@ -57,6 +57,13 @@ public class PartyController {
         return ResponseEntity.ok(ledgerService.getPartyLedger(id));
     }
 
+    @GetMapping("/{id}/outstanding-invoices")
+    public ResponseEntity<List<OutstandingInvoiceResponse>> getOutstandingInvoices(@PathVariable Long id) {
+        // TODO: Replace with actual fetching logic from Sales module once implemented.
+        // Returning empty list for now since Sales module is not yet built.
+        return ResponseEntity.ok(java.util.Collections.emptyList());
+    }
+
     @PostMapping("/{id}/transactions")
     public ResponseEntity<TransactionResponse> createTransaction(
             @PathVariable Long id,
