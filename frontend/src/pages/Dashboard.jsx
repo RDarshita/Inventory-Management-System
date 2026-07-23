@@ -5,6 +5,7 @@ import KpiCard from '../components/KpiCard';
 import Skeleton from '../components/ui/Skeleton';
 import StatusBadge from '../components/ui/StatusBadge';
 import { MonthlySalesChart, InventoryPieChart, TopProductsChart, PurchaseVsSalesChart } from '../components/dashboard/Charts';
+import DashboardDateTime from '../components/DashboardDateTime';
 
 const Dashboard = ({ refreshTrigger }) => {
   const [data, setData] = useState(null);
@@ -70,6 +71,9 @@ const Dashboard = ({ refreshTrigger }) => {
           </button>
         </div>
       </div>
+
+      {/* Date & Time Widget */}
+      <DashboardDateTime />
 
       {/* Top KPI Row */}
       <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4 md:gap-6">
